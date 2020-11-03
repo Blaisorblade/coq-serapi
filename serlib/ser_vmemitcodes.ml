@@ -54,3 +54,8 @@ let sexp_of_to_patch_substituted =
 let to_patch_substituted_of_sexp _ =
   Obj.magic PBCconstant
   (* Serlib_base.opaque_of_sexp ~typ:"Cemitcodes.to_patch_substituted" *)
+
+let python_of_to_patch_substituted =
+  Serlib_base.python_of_opaque ~typ:"Cemitcodes.to_patch_substituted"
+
+let to_patch_substituted_of_python _ = Obj.magic PBCconstant

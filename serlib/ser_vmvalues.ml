@@ -15,11 +15,12 @@
 (************************************************************************)
 
 open Sexplib.Conv
+open Ppx_python_runtime
 
 type tag =
   [%import: Vmvalues.tag]
-  [@@deriving sexp]
+  [@@deriving sexp,python]
 
 type reloc_table =
   [%import: Vmvalues.reloc_table]
-  [@@deriving sexp]
+  [@@deriving sexp,python]

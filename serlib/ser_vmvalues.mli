@@ -22,5 +22,9 @@ val tag_of_sexp : Sexp.t -> tag
 val sexp_of_tag : tag -> Sexp.t
 
 type reloc_table = Vmvalues.reloc_table
+
 val reloc_table_of_sexp : Sexp.t -> reloc_table
 val sexp_of_reloc_table : reloc_table -> Sexp.t
+
+val reloc_table_of_python : Py.Object.t -> reloc_table
+val python_of_reloc_table : reloc_table -> Py.Object.t
